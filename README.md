@@ -1,8 +1,8 @@
 # radarweb
 
-This is the  script used to generate [https://jesus.engineer/radarweb](https://jesus.engineer/radarweb).
+This is the script used to generate [https://jesus.engineer/radarweb](http://jesus.engineer/radarweb).
 
-It uses [radarplot](https://github.com/jpcano/radarplot).
+It uses the library [radarplot](https://github.com/jpcano/radarplot).
 
 Usage
 -----
