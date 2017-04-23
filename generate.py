@@ -14,7 +14,7 @@ template = Environment(
     autoescape=False,
     loader=FileSystemLoader(TEMPLATE_DIR),
     trim_blocks=False)
-cikm = CIKM('train.txt', 'train.index')
+cikm = CIKM('../data/train.txt', '../data/train.index')
 radar_data = []
 pagesn = int(cikm.getSize() / ITEMS_PER_PAGE) # number of pages
 
