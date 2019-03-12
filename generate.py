@@ -1,6 +1,6 @@
 from radarplot.CIKM import *
 from jinja2 import Environment, FileSystemLoader
-
+import os
 
 TEMPLATE_DIR = 'templates'
 ITEMS_PER_PAGE = 60
@@ -47,7 +47,9 @@ for i, radar in enumerate(cikm.getAllRadars(sorted=True, reversed=True)):
     meta["video"] = "vid/{}.mp4".format(radar.getID())
     radar_data.append(meta)
     
+    os.makedirs(IMG_DIR, exist_ok=True)
     radar.plotThumbnail('{}/{}'.format(IMG_DIR, radar.getID()))
+    os.makedirs(VID_DIR, exist_ok=True)
     radar.plot('{}/{}.mp4'.format(VID_DIR, radar.getID()))
                
     # if we are in the last element of the page we render the current page
